@@ -11,7 +11,15 @@ public class Manager : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        int numbMusicPlayers = FindObjectsOfType<AudioSource>().Length;
+        if (numbMusicPlayers > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     void Start()

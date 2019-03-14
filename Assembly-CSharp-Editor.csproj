@@ -53,11 +53,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BezierPathCreator\Core\Editor\Helper\MouseUtility.cs" />
-     <Compile Include="Assets\BezierPathCreator\Core\Editor\Helper\PathHandle.cs" />
-     <Compile Include="Assets\BezierPathCreator\Core\Editor\Helper\ScreenSpacePolyLine.cs" />
-     <Compile Include="Assets\BezierPathCreator\Core\Editor\PathEditor.cs" />
-     <Compile Include="Assets\BezierPathCreator\Examples\Scripts\Editor\PathSceneToolEditor.cs" />
+     <Compile Include="Assets\AssetPacks\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
+     <Compile Include="Assets\AssetPacks\Standard Assets\Editor\Water\Water4\GerstnerDisplaceEditor.cs" />
+     <Compile Include="Assets\AssetPacks\Standard Assets\Editor\Water\Water4\PlanarReflectionEditor.cs" />
+     <Compile Include="Assets\AssetPacks\Standard Assets\Editor\Water\Water4\SpecularLightingEditor.cs" />
+     <Compile Include="Assets\AssetPacks\Standard Assets\Editor\Water\Water4\WaterBaseEditor.cs" />
+     <Compile Include="Assets\AssetPacks\Standard Assets\Editor\Water\Water4\WaterEditorUtility.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>E:/Unity/SkyShooter_Unity3D/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -687,12 +688,8 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{87503EA0-C696-2437-A3E4-E58E9FA546CF}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{80D756FE-B995-D7D6-796C-F91BB24267C0}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
-    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{BBAFF641-84A8-4227-F2B9-4E309346F852}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

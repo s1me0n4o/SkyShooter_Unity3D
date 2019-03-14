@@ -2,17 +2,17 @@
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-
+    [Header("General")]
     [Tooltip("In mPerSec")]
     [SerializeField] float speed = 50f;
-
     [Tooltip("In mPerSec")]
     [SerializeField] float xRange = 22f;
     [Tooltip("In mPerSec")]
     [SerializeField] float yRange = 13f;
 
+    [Header("Screen-Position Based")]
     // We are mutiplying the factors to receive the desieed effects
     [SerializeField] float positionPitchFactor = -1.5f;
     [SerializeField] float controlPitchFactor = -30f;
@@ -20,12 +20,21 @@ public class Player : MonoBehaviour
     [SerializeField] float controlRowFactor = -50f;
 
     float xThrow, yThrow;
+    bool isControlEnabled = true;
 
     // Update is called once per frame
     void Update()
     {
-        Movement();
-        Rotation();
+        if (isControlEnabled)
+        {
+            Movement();
+            Rotation();
+        }
+    }
+
+    void OnPlayerDeath() //called by string reference
+    {
+        isControlEnabled = false;
     }
 
     private void Rotation()
