@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float xRange = 22f;
     [Tooltip("In mPerSec")]
     [SerializeField] float yRange = 13f;
+    [SerializeField] GameObject[] guns;
+
 
     [Header("Screen-Position Based")]
     // We are mutiplying the factors to receive the desieed effects
@@ -29,8 +31,10 @@ public class PlayerController : MonoBehaviour
         {
             Movement();
             Rotation();
+            Fire();
         }
     }
+
 
     void OnPlayerDeath() //called by string reference
     {
@@ -61,5 +65,23 @@ public class PlayerController : MonoBehaviour
         float ClampedYPos = Mathf.Clamp(newYPos, -yRange, yRange);
 
         transform.localPosition = new Vector3(ClampedXPos, ClampedYPos, transform.localPosition.z);
+    }
+
+    private void Fire()
+    {
+        if (CrossPlatformInputManager.GetButton("Fire"))
+        {
+            foreach (GameObject gun in guns)
+            {
+                gun.SetActive(true);
+            }
+        }
+        else
+        {
+            foreach(GameObject gun in guns)
+            {
+                gun.SetActive(false);
+            }
+        }
     }
 }

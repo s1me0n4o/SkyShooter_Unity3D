@@ -1,0 +1,2 @@
+E:\Unity\SkyShooter_Unity3D\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+E:\Unity\SkyShooter_Unity3D\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
