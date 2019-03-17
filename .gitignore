@@ -1,3 +1,4 @@
-Library
-db.lock
-Temp
+Library,
+db.lock,
+Temp,
+Build
